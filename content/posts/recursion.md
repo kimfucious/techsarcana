@@ -1,7 +1,6 @@
 ---
 title: "Recursion"
 date: 2019-05-13T07:42:58+07:00
-draft: true
 toc: false
 images:
 tags:
@@ -231,7 +230,7 @@ The main reason for this is that complexity (both time and space) for recursive 
 
 For example, the above solution would be considered to have a Big-O time complexity of O(2^n).
 
-{{< figure src="/time-complexity.png" title="Big-O Time Complexity" >}}
+{{< figure src="../../images/time-complexity.png" title="Big-O Time Complexity" >}}
 
 ### Why is it horrible
 
@@ -249,13 +248,13 @@ The other problem with this approach is that it is inefficient, in that every ti
 
 For example, take a look at the following representation of how `fib(6)` is derived:
 
-{{< figure src="/fib-tree.png" title="fib(6)" >}}
+{{< figure src="../../images/fib-tree.png" title="fib(6)" >}}
 
 Look how many times F(3), or fib(3), is called: 3 times.
 
 > :point_up: Note that fib(1) and fib(2) are not of great concern, because we have basically hard coded the result of these into the function; however, when seeking ever larger fib(n)'s greater than 2, the repeated calculations become significant.
 
-To address this, we can leverage the concept of [Dynamic Programming]({{<ref "/posts/dynamicProgramming">}}) toward making this function much more efficient.
+To address this, we can leverage the concept of [Dynamic Programming]({{<relref "dynamicProgramming">}}) toward making this function much more efficient.
 
 ## Dynamic Programming Approaches
 

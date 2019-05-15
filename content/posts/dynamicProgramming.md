@@ -1,7 +1,6 @@
 ---
 title: "Dynamic Programming is not Dynamic Programming"
 date: 2019-05-13T07:42:58+07:00
-draft: true
 toc: false
 images:
 tags:

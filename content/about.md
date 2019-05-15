@@ -1,7 +1,6 @@
 ---
 title: "About"
 date: 2019-05-13T07:42:58+07:00
-draft: true
 ---
 
 Have you ever read something that you thought was in a language you understood yet had know idea what you just read? It happens to me more than I'd like, esp. when reading code examples by folks who might be great programmers, but might not be the best teachers.
