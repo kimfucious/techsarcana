@@ -1,5 +1,5 @@
-# baseURL = "https://techsarcana.com"
-baseURL = "https://determined-noyce-d11485.netlify.com/"
+baseURL = "https://techsarcana.com"
+# baseURL = "https://determined-noyce-d11485.netlify.com/"
 languageCode = "en-us"
 defaultContentLanguage = "en"
 title = "Techsarcana"
