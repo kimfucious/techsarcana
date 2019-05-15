@@ -1,6 +1,6 @@
 # Techsarcana
 
-This is a static website built with Hugo.
+This is a static website built with [Hugo](https://gohugo.io/), using the [Hermit](https://github.com/Track3/hermit) theme slightly modified.
 
 It's main purpose is to explain complex programming-centric, technical topics hopefully better than I have seen them explained before.
 
