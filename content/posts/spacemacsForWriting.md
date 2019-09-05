@@ -1,6 +1,6 @@
 ---
 title: "Using Spacemacs as a (prose) Writing Environment"
-date: 2019-09-1T07:42:58+07:00
+date: 2019-09-05T07:42:58+07:00
 toc: true
 images:
 tags:
