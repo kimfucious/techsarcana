@@ -61,7 +61,9 @@ All of the below is based on a Windows, non-WSL install.  WSL instructions to fo
   - Create a shortcut of the `runemacs.exe` file located under `C:\Program Files\emacs\bin`.
   - Edit the properties of that shortcut and change the `Start in` field to where you want your default directory to be when Emacs/Spacemacs launches (e.g. `C:\Users\YOURNAME\Documents`).
   - Move that shortcut somewhere easy to click on and/or assign a shortcut key to it for easier access.
-
+  
+        Something like this:
+    
     {{< figure src="../../images/emacs_shortcut.png" title="Emacs Shortcut Example" >}}
 
 4. [Add Spacemacs](https://github.com/syl20bnr/spacemacs/blob/master/doc/BEGINNERS_TUTORIAL.org)
@@ -77,11 +79,11 @@ All of the below is based on a Windows, non-WSL install.  WSL instructions to fo
 
 ### ✔ Checkpoint
 
-Okay, at this point, when you launch Emacs you should see Spacemacs.  You'll be two questions.  
+Okay, at this point, when you launch Emacs you should see Spacemacs.  You'll be asked two questions.  
 
 {{< figure src="../../images/spacemacs_initial_setup.png" title="Spacemacs First Launch" >}}
 
-I recommend the following:  
+I recommend the following responses:  
 
 1.  Select Vim for the preferred style, unless you know you really want Emacs.
 2.  Select the standard distrubution.
