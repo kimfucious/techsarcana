@@ -1,6 +1,6 @@
 ---
 title: "Using Spacemacs as a (prose) Writing Environment"
-date: 2019-09-05T07:42:58+07:00
+date: "2019-09-05"
 toc: true
 images:
 tags:
@@ -28,7 +28,7 @@ Over the years, I've tried out many writing programs, including:
 
 I've also used plenty O' word processers, including Microsoft Word.
 
-> :memo:  I'm writing this in [Markdown](https://daringfireball.net/projects/markdown/), using the setup described herein on a Windows 10 machine, running [WSL](https://docs.microsoft.com/en-us/windows/wsl/install-win10), because my Mac died and I was feeling poor enough to buy a Windows box.
+:memo:  I'm writing this in [Markdown](https://daringfireball.net/projects/markdown/), using the setup described herein on a Windows 10 machine, running [WSL](https://docs.microsoft.com/en-us/windows/wsl/install-win10), because my Mac died and I was feeling poor enough to buy a Windows box.
 
 Each of the above applications have their own strengths, characteristics, idiosynchrasies, and weaknesses, but as far as I can remember, none of these products allow one to navigate like Emacs or Vim without any extra help.  And those things that can be considered extra help, like [Karabiner](https://pqrs.org/osx/karabiner/) and [AutoHotKey](https://www.autohotkey.com/), are imperfect solutions at best when compared with native navigation.
 
@@ -75,7 +75,7 @@ All of the below is based on a Windows, non-WSL install.  WSL instructions to fo
         git clone -b develop https://github.com/syl20bnr/spacemacs .emacs.d
         ```
 
-    :point_up: Note that the above repository link is for the `development branch`.  Oddly enough, this is the "preferred" branch to use, as it actually works "better" than the master branch.  This post and its instructions are based on the development branch.
+        :point_up: Note that the above repository link is for the `development branch`.  Oddly enough, this is the "preferred" branch to use, as it actually works "better" than the master branch.  This post and its instructions are based on the development branch.
 
 ### ✔ Checkpoint
 
@@ -148,7 +148,7 @@ dotspacemacs-configuration-layers
 
 There's a bunch of other stuff we could add here, but let's keep it simple for now.
 
-:point_up: Don't be tempted to enable other things (e.g. spell-checking) at this point.  This and others will be covered later.
+:stop_sign: Don't be tempted to enable other things (e.g. spell-checking) at this point.  Spell-checking and others will be covered later.
 
 Save these changes using the `SPC f s` key sequence and restart Spacemacs, using `SPC q R`.  
 
@@ -159,7 +159,7 @@ You should see the new packages being loaded upon restart, although it may happe
 
 There are a some settings that we can change to customize the Spacemacs initialization process.  These are optional.
 
-The following changes will be made in `(defun dotspacemacs/init()`.  This is a function, so understand that breaking syntax will mess things up.  Be sure not to add or remove anything like colons, paraens, or quote marks unnecessarily, for example.
+The following changes will be made in `defun dotspacemacs/init()`.  This is a function, so understand that breaking syntax will mess things up.  Be sure not to add or remove anything like colons, paraens, or quote marks unnecessarily, for example.
 
 #### Maximize on Startup
 Spacemacs opens in a smallish window upon start.  Set it to maximize on start with the below:
@@ -195,11 +195,11 @@ dotspacemacs-line-numbers t
 
 ### ✔ Checkpoint
 
-You should now be able to create an `.org` file like the below in Spacemacs.  Note the bullets, this is how you know Org Mode is working properly.
+You should now be able to create an `.org` file like the below in Spacemacs.  Note the bullets, this a good sign that Org Mode is working.
 
 {{< figure src="../../images/spacemacs_org_example.png" title="Spacemacs Org Mode Example" >}}
 
->:unicorn: See the [resources section](#resources) for a brief video overview of [Org Mode in Spacemacs](https://orgmode.org/) 
+:unicorn: See the [resources section](#resources) for a brief video overview of [Org Mode in Spacemacs](https://orgmode.org/) 
 
 ### Setup Spell-checking
 
@@ -207,13 +207,13 @@ This setup uses [Hunspell](http://hunspell.github.io/) and [FlySpell](https://ww
 
 FlySpell is nice because it will highlight spelling errors "on the fly".
 
-Note that I've only included an American English dictionary (en_US).  Adjust to your requirements. 
+:book: Note that I've only included an American English dictionary (en_US).  Adjust to your requirements. 
 
 1. Download [Hunspell](https://sourceforge.net/projects/hunspell/)
 2. Extract the zip file contents to `C:\Program Files\hunspell` or wherever you want it to go.  If you use something different, modify the exec-path in the second code block below accordingly.
 3. Open the `.spacemacs` dot file for editing.
 
-⚠️ Be very careful not to mangle syntax when editing the `.spacemacs` dot file!
+⚠️ Be careful not to mangle syntax when editing the `.spacemacs` dot file!
 
 #### Under `dotspacemacs-configuration-layers`
 
@@ -240,7 +240,7 @@ Add the following code block:
         '(("en_US" "[[:alpha:]]" "[^[:alpha:]]" "[']" nil nil nil utf-8))))
 ```
 
-:point_up: Note that this code block uses `exec-path`, which obviates the need to add `hunspell.exe` to your PATH.
+:point_up: Note that this code block uses `exec-path`, which obviates the need to add `hunspell.exe` to your system PATH.
 
 Once done, restart Spacemacs (`SPC q R`)
 
@@ -300,7 +300,9 @@ Ultimately, after we're all done writing something worth sharing, we want to pri
 
 ### ✔ Checkpoint
 
-After that, you should be able to export your work to a PDF.  Let's test it out:
+After that, you should be able to export your work to a PDF.  
+
+Let's test it out:
 
 1. If you haven't already, create an `.org` document.
 2. Here's a starter.  Change it to your liking and save it:
@@ -311,8 +313,7 @@ After that, you should be able to export your work to a PDF.  Let's test it out:
     #+AUTHOR: Your Awesome Nom de Plume 
     * My Awesome Org File
       Isn't it neat?!
-    ** My Awesome Subtopic
-    {{< /highlight >}}
+    ** My Awesome Subtopic{{< /highlight >}}
 
 Don't fiddle too much here.  Formatting is a whole 'nuther can of worms.  We're just seeing if we can get it to work at this moment. 
 
@@ -332,7 +333,7 @@ Don't fiddle too much here.  Formatting is a whole 'nuther can of worms.  We're 
 
 ### Checking if Emacs can see an executable
 
-There may be times when you're scratching your head (or banging it against a wall) because something isn't working.  Sometimes the reason that something doesn't work is because Emacs can't see the executable.  This is usually because the executable file in question is not in your PATH.
+There may be times when you're scratching your head (or banging it against a wall) because something isn't working.  Sometimes the reason that something doesn't work is because Emacs can't see the executable.  This is usually because the executable file in question is not installed and/or not in your system PATH.
 
 To see if Emacs can see an executable, try the following:
 
@@ -352,7 +353,7 @@ If the response is `nil`, then Emacs can't see the executable.  See [resources](
 
 If Spacemacs is hanging on load, it could be because it's having trouble accessing the package manager via HTTPS.
 
-:confused:  I've only experienced this when using WSL, not a straight Windows install.
+:confused:  I've only experienced this when using WSL, not a straight Windows install.  And the only way I know around this is to disable HTTPS, either temporarily or permanently.
 
 #### Temporarily disable HTTPS
 You can get around this as a one-off by using the `--insecure` flag when issuing the `runemacs.exe` command, like this:
@@ -364,7 +365,7 @@ Microsoft Windows [Version 10.0.17763.678]
 C:\Program Files\emacs\bin>runemacs.exe --insecure
 ```
 
->:point_up:  Note that the command is being executed in the directory where it exists.  Otherwise, you'd need the directory in your path.
+:point_up:  Note that the command is being executed in the directory where it exists.  Otherwise, you'd need the directory in your path.
 
 #### Permanently disable HTTPS
 There's a couple ways to do this:
@@ -377,7 +378,7 @@ There's a couple ways to do this:
   - Locate `dotspacemacs-elpa-https t` in  `.spacemacs`, and change `t` to `nil`.
   - Restart Spacemacs with `SPC q R`.
 
-### Re-jigging Spacemacs
+### Re-jigging Spacemacs Packages
 
 More than once, while working toward getting all this up and running, something unexplicably would not work.  Sometimes something as easy as restarting Spacemacs `M-q R` or "resyncing the configuration layers" `SPC f e R` would fix it.  A couple of times, it needed something a tad more potent.  
 
@@ -418,17 +419,17 @@ See "*Org PDF LaTeX Output*" for details{{< /highlight >}}
 
     To be sure that Emacs and thus Spacemacs can see these executables, see [Checking if Emacs can see an executable](#checking-if-emacs-can-see-an-executable).
 
-    If Emacs can't see an executable, make sure that it's in your PATH.  See [here](https://www.computerhope.com/issues/ch000549.htm) for help on that.
+    If Emacs can't see an executable, make sure that it's in your PATH.  See the [Resources Section ](#resources) for help on that.
 
-2. This is a dumb one, but I do it more than I'd like to admit.  Exporting will fail if the PDF file is open.  Close the file, if it's open, and run the export process again.
+2. This is a dumb one, but I do it more than I'd care to admit.  Exporting will fail if the PDF file is already open somewhere on your machine.  Check your browser, Adobe Acrobat, Spacemacs itself, or whereever else it might be open.  Close the file, if it's open, and run the export process again.
 
 ## Conslusion
 
 - :100: free open source solution
 - 😭 A relative pain to setup 
 - 💁🏼‍♀️ Community-based support 
-- 📵 No companion app for mobile
-- 😵 Steep learning curve with 
+- 📵 [MobileOrg](https://mobileorg.github.io/) companion app
+- 😵 Steep learning curve
 - 😤 High probability of frustration (╯°□°）╯︵ ┻━┻
 - 🤓 Ultra-high nerd factor
 - :scream: Will ruin you for other apps than don't do Vim
