@@ -240,7 +240,7 @@ Add the following code block:
         '(("en_US" "[[:alpha:]]" "[^[:alpha:]]" "[']" nil nil nil utf-8))))
 ```
 
-:point_up: Note that this code block uses `exec-path`, which obviates the need to add `hunspell.exe` to your system PATH.
+:point_up: Note that this code block uses `exec-path`, which obviates the need to add `hunspell.exe` to your system PATH.  If this doesn't work for you, for some reason, add the path to `hunspell.exe` to your system path.
 
 Once done, restart Spacemacs (`SPC q R`)
 
